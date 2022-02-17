@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FD_Aula1
-Thu Feb 17 15:37:57 2022
+Thu Feb 17 16:07:54 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Thu Feb 17 15:37:57 2022           ;
+; Analysis & Synthesis Status ; Failed - Thu Feb 17 16:07:54 2022           ;
 ; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name               ; FD_Aula1                                    ;
 ; Top-level Entity Name       ; FD_Aula1                                    ;
@@ -162,21 +162,35 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Feb 17 15:37:36 2022
+    Info: Processing started: Thu Feb 17 16:07:43 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FD_Aula1 -c FD_Aula1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file fd_aula1.vhd
-    Info (12022): Found design unit 1: FD_Aula1-arquitetura File: //wsl$/Ubuntu/home/otofuji/descomp/aulas/1/FD_Aula1.vhd Line: 18
-    Info (12023): Found entity 1: FD_Aula1 File: //wsl$/Ubuntu/home/otofuji/descomp/aulas/1/FD_Aula1.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: //wsl$/Ubuntu/home/otofuji/descomp/aulas/1/muxGenerico2x1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1 File: //wsl$/Ubuntu/home/otofuji/descomp/aulas/1/muxGenerico2x1.vhd Line: 4
-Error (10481): VHDL Use Clause error at FD_Aula1.vhd(47): design library "work" does not contain primary unit "edgeDetector". Verify that the primary unit exists in the library and has been successfully compiled. File: //wsl$/Ubuntu/home/otofuji/descomp/aulas/1/FD_Aula1.vhd Line: 47
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4827 megabytes
-    Error: Processing ended: Thu Feb 17 15:37:57 2022
-    Error: Elapsed time: 00:00:21
-    Error: Total CPU time (on all processors): 00:00:42
+Info (12021): Found 2 design units, including 1 entities, in source file FD_Aula1.vhd
+    Info (12022): Found design unit 1: FD_Aula1-arquitetura File: /home/otofuji/descomp/aulas/1/FD_Aula1.vhd Line: 18
+    Info (12023): Found entity 1: FD_Aula1 File: /home/otofuji/descomp/aulas/1/FD_Aula1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico2x1.vhd
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/otofuji/descomp/aulas/1/muxGenerico2x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: /home/otofuji/descomp/aulas/1/muxGenerico2x1.vhd Line: 4
+Info (12021): Found 3 design units, including 1 entities, in source file edgeDetector.vhd
+    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: /home/otofuji/descomp/aulas/1/edgeDetector.vhd Line: 10
+    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: /home/otofuji/descomp/aulas/1/edgeDetector.vhd Line: 23
+    Info (12023): Found entity 1: edgeDetector File: /home/otofuji/descomp/aulas/1/edgeDetector.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file registradorGenerico.vhd
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/otofuji/descomp/aulas/1/registradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: /home/otofuji/descomp/aulas/1/registradorGenerico.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ULASomaSub.vhd
+    Info (12022): Found design unit 1: ULASomaSub-comportamento File: /home/otofuji/descomp/aulas/1/ULASomaSub.vhd Line: 14
+    Info (12023): Found entity 1: ULASomaSub File: /home/otofuji/descomp/aulas/1/ULASomaSub.vhd Line: 5
+Error (10482): VHDL error at FD_Aula1.vhd(53): object "sinalLocal" is used but not declared File: /home/otofuji/descomp/aulas/1/FD_Aula1.vhd Line: 53
+Error (10482): VHDL error at FD_Aula1.vhd(54): object "sinalLocal" is used but not declared File: /home/otofuji/descomp/aulas/1/FD_Aula1.vhd Line: 54
+Error (10482): VHDL error at FD_Aula1.vhd(55): object "sinalLocal" is used but not declared File: /home/otofuji/descomp/aulas/1/FD_Aula1.vhd Line: 55
+Error (10482): VHDL error at FD_Aula1.vhd(56): object "sinalLocal" is used but not declared File: /home/otofuji/descomp/aulas/1/FD_Aula1.vhd Line: 56
+Error (10558): VHDL error at FD_Aula1.vhd(56): cannot associate formal port "saida_MUX" of mode "out" with an expression File: /home/otofuji/descomp/aulas/1/FD_Aula1.vhd Line: 56
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 5 errors, 1 warning
+    Error: Peak virtual memory: 525 megabytes
+    Error: Processing ended: Thu Feb 17 16:07:54 2022
+    Error: Elapsed time: 00:00:11
+    Error: Total CPU time (on all processors): 00:00:27
 
 
