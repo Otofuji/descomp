@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FD_Aula1
-Thu Feb 17 15:24:33 2022
+Thu Feb 17 15:37:57 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Thu Feb 17 15:24:33 2022           ;
+; Analysis & Synthesis Status ; Failed - Thu Feb 17 15:37:57 2022           ;
 ; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name               ; FD_Aula1                                    ;
 ; Top-level Entity Name       ; FD_Aula1                                    ;
@@ -60,6 +60,8 @@ https://fpgasoftware.intel.com/eula.
 ; Device                                                                          ; 5CEBA4F23C7        ;                    ;
 ; Top-level entity name                                                           ; FD_Aula1           ; FD_Aula1           ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; VHDL Show LMF Mapping Messages                                                  ; Off                ;                    ;
+; VHDL Version                                                                    ; VHDL_2008          ; VHDL_1993          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
@@ -69,7 +71,6 @@ https://fpgasoftware.intel.com/eula.
 ; Preserve fewer node names                                                       ; On                 ; On                 ;
 ; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
 ; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
 ; State Machine Processing                                                        ; Auto               ; Auto               ;
 ; Safe State Machine                                                              ; Off                ; Off                ;
 ; Extract Verilog State Machines                                                  ; On                 ; On                 ;
@@ -161,21 +162,21 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Feb 17 15:24:16 2022
+    Info: Processing started: Thu Feb 17 15:37:36 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FD_Aula1 -c FD_Aula1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file FD_Aula1.vhd
-    Info (12022): Found design unit 1: FD_Aula1-arquitetura File: /home/otofuji/descomp/aulas/1/FD_Aula1.vhd Line: 18
-    Info (12023): Found entity 1: FD_Aula1 File: /home/otofuji/descomp/aulas/1/FD_Aula1.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico2x1.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/otofuji/descomp/aulas/1/muxGenerico2x1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1 File: /home/otofuji/descomp/aulas/1/muxGenerico2x1.vhd Line: 4
-Error (10887): VHDL error at FD_Aula1.vhd(44): elsif or else statement inside a generate statement is not supported in VHDL_1993, and is only supported for VHDL 2008 File: /home/otofuji/descomp/aulas/1/FD_Aula1.vhd Line: 44
+Info (12021): Found 2 design units, including 1 entities, in source file fd_aula1.vhd
+    Info (12022): Found design unit 1: FD_Aula1-arquitetura File: //wsl$/Ubuntu/home/otofuji/descomp/aulas/1/FD_Aula1.vhd Line: 18
+    Info (12023): Found entity 1: FD_Aula1 File: //wsl$/Ubuntu/home/otofuji/descomp/aulas/1/FD_Aula1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1.vhd
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: //wsl$/Ubuntu/home/otofuji/descomp/aulas/1/muxGenerico2x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: //wsl$/Ubuntu/home/otofuji/descomp/aulas/1/muxGenerico2x1.vhd Line: 4
+Error (10481): VHDL Use Clause error at FD_Aula1.vhd(47): design library "work" does not contain primary unit "edgeDetector". Verify that the primary unit exists in the library and has been successfully compiled. File: //wsl$/Ubuntu/home/otofuji/descomp/aulas/1/FD_Aula1.vhd Line: 47
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 526 megabytes
-    Error: Processing ended: Thu Feb 17 15:24:33 2022
-    Error: Elapsed time: 00:00:17
-    Error: Total CPU time (on all processors): 00:00:39
+    Error: Peak virtual memory: 4827 megabytes
+    Error: Processing ended: Thu Feb 17 15:37:57 2022
+    Error: Elapsed time: 00:00:21
+    Error: Total CPU time (on all processors): 00:00:42
 
 
