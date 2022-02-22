@@ -28,8 +28,10 @@ architecture arquitetura of FD_Aula1 is
 
 -- Faltam alguns sinais:
   signal chavesX_ULA_B : std_logic_vector (larguraDados-1 downto 0);
+  signal chavesY_MUX_A : std_logic_vector (larguraDados-1 downto 0);
   signal REG1_ULA_A : std_logic_vector (larguraDados-1 downto 0);
   signal Saida_ULA : std_logic_vector (larguraDados-1 downto 0);
+  signal MUX_REG_A : std_logic_vector (larguraDados-1 downto 0);
   signal Chave_Operacao_ULA : std_logic;
   signal CLK : std_logic;
   signal SelMUX : std_logic;
@@ -50,23 +52,27 @@ end generate;
 
 -- Falta preencher o port map.
 MUX1 :  entity work.muxGenerico2x1  generic map (larguraDados => larguraDados)
-        port map( entradaA_MUX => sinalLocal,
-                 entradaB_MUX =>  sinalLocal,
-                 seletor_MUX => sinalLocal,
-                 saida_MUX => sinalLocal);
+        port map( entradaA_MUX => chavesY_MUX_A,
+                 entradaB_MUX =>  Saida_ULA,
+                 seletor_MUX => SelMUX,
+                 saida_MUX => MUX_REG_A);
 
 -- Falta preencher o port map.
 REG1 : entity work.registradorGenerico   generic map (larguraDados => larguraDados)
-          port map (DIN => sinalLocal, DOUT => sinalLocal, ENABLE => sinalLocal, CLK => CLK, RST => sinalLocal);
+          port map (DIN => MUX_REG_A, DOUT => REG1_ULA_A, ENABLE => Habilita_A, CLK => CLK, RST => Reset_A);
 
 -- O port map completo da ULA:
 ULA1 : entity work.ULASomaSub  generic map(larguraDados => larguraDados)
           port map (entradaA => REG1_ULA_A, entradaB =>  chavesX_ULA_B, saida => Saida_ULA, seletor => SW(4));
 
 -- Chaves e Botoes: Falta completar.
-
+chavesX_ULA_B <= SW(9 downto 6);
+chavesY_MUX_A <= SW(3 downto 0);
+SelMUX <= SW(5);
+Operacao_ULA <= SW(4);
 Reset_A <= not KEY(1);
 Habilita_A <= KEY(2);
+
 
 -- A ligacao dos LEDs:
 LEDR (9) <= SelMUX;
